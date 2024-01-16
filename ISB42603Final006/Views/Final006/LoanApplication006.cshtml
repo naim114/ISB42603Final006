@@ -1,0 +1,61 @@
+﻿ @model ISB42603Final006.Models.HousingLoan
+
+@{
+    ViewData["Title"] = "Loan Application Form";
+}
+
+<h3>Loan Application Form</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Customer Id:</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.Id)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Name:</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Gender (M/F):</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.Gender)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Credit Status (A/B/C):</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.CreditRisk)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Principal (RM):</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.Principal, new { @type = "number" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Number of Years:</label>
+        </div>
+        <div class="col-6">
+            @Html.TextBoxFor(m => m.NumberOfYears, new { @type = "number" })
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+}

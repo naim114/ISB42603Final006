@@ -1,0 +1,76 @@
+﻿ @model ISB42603Final006.Models.HousingLoan
+
+@{
+    ViewData["Title"] = "Loan Application Result";
+}
+
+<h3>Loan Application Result</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Customer Id:</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.Id)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Name:</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Gender (M/F):</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.Gender)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Credit Status (A/B/C):</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.CreditRisk)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Interest Rate (%):</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.InterestRate)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Principal (RM):</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.Principal, new { @type = "number" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Number of Years:</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.NumberOfYears, new { @type = "number" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label class="form-label">Monthly Payment (RM):</label>
+        </div>
+        <div class="col-6">
+            @Html.DisplayFor(m => m.MonthlyPayment, new { @type = "number" })
+        </div>
+    </div>
+
+}
